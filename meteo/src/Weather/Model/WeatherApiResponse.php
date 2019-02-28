@@ -9,16 +9,16 @@ class WeatherApiResponse
     private $wind;
 
     public function __construct(
-        TemperatureMesure $temperature,
+        TemperatureMeasure $temperature,
         HumidityMeasure $humidity,
-        WindMeasure $wind
+        ?WindMeasure $wind
     ) {
         $this->temperature = $temperature;
         $this->humidity = $humidity;
         $this->wind = $wind;
     }
 
-    public function getTemperature(): TemperatureMesure
+    public function getTemperature(): TemperatureMeasure
     {
         return $this->temperature;
     }
@@ -28,7 +28,7 @@ class WeatherApiResponse
         return $this->humidity;
     }
 
-    public function getWind(): WindMeasure
+    public function getWind(): ?WindMeasure
     {
         return $this->wind;
     }

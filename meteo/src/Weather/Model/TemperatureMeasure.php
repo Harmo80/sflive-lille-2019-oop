@@ -2,13 +2,13 @@
 
 namespace App\Weather\Model;
 
-class TemperatureMesure
+class TemperatureMeasure
 {
     private $value;
 
     public function __construct(float $value)
     {
-        if ($value < 273.15) {
+        if ($value < -273.15) {
             throw new \InvalidArgumentException('Temperature measure is invalid.');
         }
 
