@@ -4,7 +4,7 @@ namespace App\Weather;
 
 use App\Weather\Model\WeatherApiResponse;
 
-class WeatherRequestHandler
+class WeatherRequestHandler implements WeatherRequestHandlerInterface
 {
     /**
      * @var CityWeatherFetcherInterface[]

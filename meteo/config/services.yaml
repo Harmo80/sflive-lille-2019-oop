@@ -32,3 +32,8 @@ services:
 
     App\Weather\WeatherRequestHandler:
         arguments: [!tagged 'app.weather_fetcher']
+
+    App\Weather\WeatherRequestHandlerInterface: '@App\Weather\CachedWeatherRequestHandler'
+
+    App\Weather\CachedWeatherRequestHandler:
+        arguments: ['@App\Weather\WeatherRequestHandler']
